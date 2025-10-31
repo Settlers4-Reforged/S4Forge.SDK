@@ -57,7 +57,7 @@ jobs:
         uses: softprops/action-gh-release@v1
         with:
           tag_name: ${{inputs.version}}
-          files: BUILD/Release/*
+          files: ${{inputs.package_folder}}/BUILD/Release/*
           body: |
             Release for version [${{inputs.version}}]
           generate_release_notes: true
@@ -69,7 +69,7 @@ jobs:
         with:
           tag_name: release/latest
           name: Latest
-          files: BUILD/Release/*
+          files: ${{inputs.package_folder}}/BUILD/Release/*
           body: |
             Release for version [${{inputs.version}}]
           generate_release_notes: true
