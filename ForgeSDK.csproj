@@ -61,6 +61,20 @@
 
     <ItemGroup>
         <PackageReference Include="Microsoft.Build.Utilities.Core" Version="17.11.48" PrivateAssets="all" ExcludeAssets="Runtime" />
-        <ProjectReference Include="..\ForgeUpdater.csproj" PrivateAssets="all" />
     </ItemGroup>
+
+
+    <Choose>
+        <When Condition="'$(SolutionName)'=='S4ModdingFramework'">
+            <ItemGroup>
+                <ProjectReference Include="..\S4ForgeUpdater\ForgeUpdater\ForgeUpdater.csproj" />
+            </ItemGroup>
+        </When>
+        <Otherwise>
+            <ItemGroup>
+                <PackageReference Include="S4Forge.Updater" Version="0.6.*" />
+            </ItemGroup>
+        </Otherwise>
+    </Choose>
+    
 </Project>
