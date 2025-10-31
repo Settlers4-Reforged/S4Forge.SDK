@@ -20,6 +20,8 @@ jobs:
   release:
     name: Create Release
     runs-on: windows-latest
+    env:
+      SENTRY_AUTH_TOKEN: ${{ secrets.SENTRY_KEY }}
     steps:
       ## SETUP ##
       - name: Checkout
