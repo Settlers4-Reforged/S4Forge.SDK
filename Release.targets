@@ -4,7 +4,7 @@
     <ReleaseVersion Condition="'$(ReleaseVersion)' == ''">1.0.0</ReleaseVersion>
 
     <ReleaseName Condition="'$(ReleaseName)' == ''">$(TargetName)</ReleaseName>
-    <ReleaseFile>$(ReleaseName).$(ReleaseVersion).zip</ReleaseFile>
+    <ReleaseFile>$(ReleaseName).zip</ReleaseFile>
 
     <ReleasePath>$(ProjectDir)BUILD\Release\</ReleasePath>
     <ReleaseOutputPath>$(ReleasePath)\$(ReleaseName)</ReleaseOutputPath>
