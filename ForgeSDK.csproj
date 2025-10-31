@@ -60,6 +60,10 @@
     </ItemGroup>
 
     <ItemGroup>
+      <None Include=".github\**" />
+    </ItemGroup>
+
+    <ItemGroup>
         <PackageReference Include="Microsoft.Build.Utilities.Core" Version="17.11.48" PrivateAssets="all" ExcludeAssets="Runtime" />
     </ItemGroup>
 

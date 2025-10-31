@@ -2,6 +2,10 @@ name: Release package
 
 on:
   workflow_call:
+    secrets:
+      SENTRY_KEY:
+        required: false
+        description: Sentry Auth Token
     inputs:
       version:
         type: string
